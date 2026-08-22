@@ -56,6 +56,7 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::278177225651:role/github-actions-user-service-role
           aws-region: ${{ env.AWS_REGION }}
+          role-skip-session-tagging: true
 
       - name: Login en ECR
         id: login-ecr
